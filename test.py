@@ -1,4 +1,4 @@
-import parent
+from parent import *
 
 class Song():
     def __init__(self, name = "", artist = "", duration = "", timesplayed = "", releasedate = "", cost = 0.00):
@@ -10,5 +10,9 @@ class Song():
         self.cost = cost
 
 def main():
-    despacito = Song("Despacito”, "Luis Fonsi ft. Daddy Yankee", "'3:47'", 1.9 Billion, "2017", 1.00)
+    despacito = Song("Despacito", "Luis Fonsi ft. Daddy Yankee", "3:47", "1.9 Billion", "2017", 1.00)
+    despacito = Song("Despacito", "Luis Fonsi ft. Daddy Yankee", "3:47", "1.9 Billion", "2017", 1.00)
     songs = []
+    staticFunction()
+
+main()
