@@ -15,7 +15,7 @@ benefits = 0.00
 taxes = 0.00
 netpay = 0.00
 
-def main():
+def printinfo():
     print("Overtime: " + str(overtimehours) + " Hours")
     print("Overtime Pay: " + str(overtime))
     print("Gross Pay Before Benefits: " + str(grosspay))
@@ -27,14 +27,14 @@ def get_input():
     while True:
         try:
             hours = int(input("Number of hours worked (0-50): "))
-            if get_hours_worked():
+            if get_hours_worked(hours):
                 break
         except ValueError:
             print("Please enter a number between 0 and 50")
     get_hourly_rate()
 
 
-def get_hours_worked():
+def get_hours_worked(hours):
     if hours > 50 or hours < 0:
         print("Please enter a number between 0 and 50")
     elif hours > 40:
