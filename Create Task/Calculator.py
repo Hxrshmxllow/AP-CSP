@@ -17,20 +17,17 @@ for x in action:
 answer = 0
 while len(numbers) != 1:
     while len(actions) != 0:
-        if action[0] == "+":
-            answer += numbers[0] + numbers[1]
-        elif action[0] == "-":
-            answer += numbers[0] - numbers[1]
-        elif action[0] == "/":
-            answer += numbers[0] / numbers[1]
-        elif action[0] == "*":
-            answer += numbers[0] * numbers[1]
+        if actions[0] == "+":
+            answer = numbers[0] + numbers[1]
+        elif actions[0] == "-":
+            answer = numbers[0] - numbers[1]
+        elif actions[0] == "/":
+            answer = numbers[0] / numbers[1]
+        elif actions[0] == "*":
+            answer = numbers[0] * numbers[1]
         actions.pop(0)
         numbers.pop(0)
         if len(numbers) != 1:
             numbers[0] = answer
-        print(answer)
-        print(actions)
-        print(numbers)
 
 print(f"Answer: {answer}")
